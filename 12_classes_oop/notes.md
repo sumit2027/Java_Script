@@ -16,7 +16,8 @@ Object literal {}
 - Instances (new, this)
 
 ## 4 pillars
-Abstraction   {delels hide karna}
+Abstraction   {detels hide karna}
+
 Encapsulation {data to rep dar deta hai}
 Inheritance   {}
 Polymorphism  {ek method sab hold karke rakhata hai}

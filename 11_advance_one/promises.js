@@ -105,15 +105,26 @@ async function consumePromiseFive() {
 consumePromiseFive();
 
 // let date;
-async function getAllUsers() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+// async function getAllUsers() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
         
-        const date = response.json()
-        console.log(data);
+//         const date = await response.json()
+//         console.log(data);
          
-    } catch (error) {
-        console.log("E",error);
-    }
-}
-getAllUsers()
+//     } catch (error) {
+//         console.log("E",error);
+//     }
+// }
+// getAllUsers()
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://api.github.com/users/sumit2027')
+.then((response)=> {
+  return response.json()
+})
+.then((data)=> {
+  console.log(data);
+})
+.catch((error)=> console.log(error)
+)

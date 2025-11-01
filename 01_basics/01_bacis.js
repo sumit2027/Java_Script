@@ -8,13 +8,4 @@ accoutPassword = "65561";
 accoutCity = "kila";
 
 
-
-
-
-
-
-
-
-
-
 // console.table([accoutId, accoutName, accoutPassword,accoutCity]);

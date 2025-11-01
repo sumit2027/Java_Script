@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure with Chai</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    
+
+</body>
+<script>
+    // function outer(){
+    //     let username = "Sumit"
+    //     function inner(){
+    //         // let secret = "123abc"
+    //         console.log("inner:-",username);
+    //     }
+    //     function innertwo(){
+    //         let secret = "123abc"
+    //         console.log("innertwo:-", username);
+    //         // console.log("secret",secret);
+            
+    //         function innerthree(){
+    //             console.log("innerthree:-",username);
+    //             console.log("secret",secret);
+
+                
+    //         }
+    //         innerthree()
+    //     }
+    //     innertwo()
+    //     inner()
+    // }
+    // outer()
+    // console.log("Outter", username);
+
+
+//     function init() {
+//         let  name = "Mozilla"; 
+//         function displayName() {
+//         console.log(name);  
+//   }
+//     displayName();
+// }
+// init();
+
+
+function makeFunc() {
+    const name = "Mozilla";
+       function displayName() {
+         console.log(name);
+  }
+   return displayName;
+}
+const myFunc = makeFunc();
+myFunc();
+    
+</script>
+
+<script>
+
+    // Lexical Scoping
+
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // }
+
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+
+<!-- <script src="script.js"></script> -->
+</html>
